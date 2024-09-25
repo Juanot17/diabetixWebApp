@@ -4,25 +4,25 @@ import { compare, email, maxLength, prop, required } from '@rxweb/reactive-form-
 export class RegisterRequest {
   @email({ message: 'Validations.MustBeEmail' })
   @required({ message: 'Validations.IsRequired' })
-  public email: string;
+  public email: string = '';
 
   @required({ message: 'Validations.IsRequired' })
-  public user: string;
+  public user: string = '';
 
   @required({ message: 'Validations.IsRequired' })
-  public password: string;
+  public password: string = '';
 
   @compare({ fieldName: 'password', message: 'Validations.ThePasswordsAreNotEquals' })
   @required({ message: 'Validations.IsRequired' })
-  public confirmpassword: string;
+  public confirmpassword: string = '';
 
   @required({ message: 'Validations.IsRequired' })
-  public name: string;
+  public name: string  = '';
 
   @required({ message: 'Validations.IsRequired' })
-  public birthdate: Date;
+  public birthdate: Date = new Date();
 
   @required({ message: 'Validations.IsRequired' })
-  public cellphone: string;
+  public cellphone: string  = '';
 
 }

@@ -14,8 +14,8 @@ import { FormGroup } from '@angular/forms';
 
 export class LoginComponent implements OnInit {
 
-  formObj: LoginRequest;
-  formGroup: FormGroup;
+  formObj: LoginRequest = new LoginRequest();
+  formGroup: FormGroup = new FormGroup({});
   hide = true;
   
   constructor(private formBuilder: RxFormBuilder, private route: Router, private router: ActivatedRoute,

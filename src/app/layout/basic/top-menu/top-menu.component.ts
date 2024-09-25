@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TopMenuComponent implements OnInit {
 
-  logo: string;
+  logo: string = '';
   expand = true;
   constructor(private route: Router) {
   }

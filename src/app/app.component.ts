@@ -10,8 +10,6 @@ import { filter } from 'rxjs/operators';
 export class AppComponent {
   title = 'Diabetix Web App';
   loading = true;
-  previousUrl: string = null;
-  currentUrl: string = null;
 
   constructor(private router: Router) {
   }

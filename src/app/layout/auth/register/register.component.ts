@@ -15,11 +15,11 @@ import { ConfirmComponent } from '../confirm/confirm.component';
 })
 export class RegisterComponent implements OnInit {
 
-  formObj: RegisterRequest;
+  formObj: RegisterRequest = new RegisterRequest();
   hide = true;
   hideConfirmPassword = true;
   hasCodeVerification = false;
-  public formGroup: FormGroup;
+  public formGroup: FormGroup = new FormGroup({});
   loading = false;
   readonly dialog = inject(MatDialog);
   constructor(private formBuilder: RxFormBuilder, private route: Router, private router: ActivatedRoute,
