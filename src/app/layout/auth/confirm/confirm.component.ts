@@ -3,7 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router, ActivatedRoute, QueryParamsHandling, Params } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { RxFormBuilder } from '@rxweb/reactive-form-validators';
+import { RxFormBuilder, email } from '@rxweb/reactive-form-validators';
 import { of, Subscription } from 'rxjs';
 import { switchMap, take } from 'rxjs/operators';
 
@@ -14,7 +14,7 @@ import { switchMap, take } from 'rxjs/operators';
 })
 export class ConfirmComponent implements OnInit {
   readonly dialogRef = inject(MatDialogRef<ConfirmComponent>);
-
+  readonly email = "Maria@gmail.com";
   constructor(private route: Router, private router: ActivatedRoute,
     private http: HttpClient) {
   }
@@ -38,6 +38,7 @@ export class ConfirmComponent implements OnInit {
   }
 
   onNoClick(): void {
+    this.route.navigate([`/auth/login`]);
     this.dialogRef.close();
   }
 }

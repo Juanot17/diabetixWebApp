@@ -37,8 +37,7 @@ export class RegisterComponent implements OnInit {
   }
 
   submitServer() {
-    const dialogRef = this.dialog.open(ConfirmComponent, {
-      data: {email: this.formGroup.value.email()},
+    const dialogRef = this.dialog.open(ConfirmComponent, {      
     });
 
     dialogRef.afterClosed().subscribe(result => {
